@@ -1,0 +1,82 @@
+.btn {
+  text-align: center;
+  overflow: hidden; /*必須*/
+}
+
+/* ボタン（リンク）部分 */
+.btn a {
+  text-decoration: none; /*下線削除*/
+  display: inline-block;
+  position: relative; /*疑似要素作成用*/
+  padding: 10px 20px;
+  font-weight: bold; /*太字*/
+}
+
+/*ボタンの枠線*/
+.btn a:hover::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #fefffb;
+  border-radius: 10px;
+  z-index: -2;
+  animation-name: fadeInAnime;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+/*** ボタン線上の光沢 ***/
+.btn a:hover::after {
+  content: '';
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: white; /*光沢の色は背景色*/
+  filter: blur(5px); /*ぼかし*/
+  animation: 2.5s arround-circle linear infinite; /*枠線場を周るアニメーション*/
+  z-index: -1;
+}
+
+/*** 線上を回るアニメーション ***/
+@keyframes arround-circle {
+  /**************
+  0%~40%：左上から右上
+  40%~50%：右上から右下
+  50%~90%：右下から左下
+  90%~100%：左下から左上
+  **************/
+  0% {
+    top: -10px;
+    left: -10px;
+  }
+  40% {
+    top: -10px;
+    left: 95%; /*右まで移動*/
+  }
+  50% {
+    top: 85%; /*下まで移動*/
+    left: 95%;
+  }
+  90% {
+    top: 85%;
+    left: -10px; /*左まで移動*/
+  }
+  100% {
+    top: -10px; /*元の位置*/
+    left: -10px;
+  }
+}
+
+@keyframes fadeInAnime {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
