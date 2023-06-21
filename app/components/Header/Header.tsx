@@ -3,7 +3,9 @@ import React from 'react';
 const Header = () => {
   return (
     <div>
-      <title className='w-full p-40'>Welcom to Chinami PortfolioSite</title>
+      <div className='w-full h-32 text-center items-center grid text-5xl'>
+        Welcom to Chinami PortfolioSite
+      </div>
     </div>
   );
 };
