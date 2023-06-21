@@ -18,7 +18,11 @@ const Nav = () => {
         >
           {NAV_ITEMS.map((item) => {
             return (
-              <Link key={item.href} href={item.href} className='cursor-pointer'>
+              <Link
+                key={item.href}
+                href={item.href}
+                className={`${classes.neon} cursor-pointer`}
+              >
                 {item.label}
               </Link>
             );

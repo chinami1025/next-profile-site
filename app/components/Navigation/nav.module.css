@@ -35,10 +35,14 @@
   position: absolute;
   width: 15px;
   height: 15px;
-  background: white; /*光沢の色は背景色*/
+  background: #fefffb; /*光沢の色は背景色*/
   filter: blur(5px); /*ぼかし*/
   animation: 2.5s arround-circle linear infinite; /*枠線場を周るアニメーション*/
   z-index: -1;
+}
+
+.neon {
+  text-shadow: 0 0 7px #fff, 0 0 20px #bcfcff;
 }
 
 /*** 線上を回るアニメーション ***/
