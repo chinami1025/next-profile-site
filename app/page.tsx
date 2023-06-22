@@ -9,7 +9,12 @@ export default function Home() {
       <Nav />
 
       <div>
-        <Header />
+        <Header
+          style={
+            'w-full h-32 text-center items-center grid text-5xl drop-shadow-lg'
+          }
+          title={'Welcom to Chinami PortfolioSite'}
+        />
         <Image src={kobe} alt='BE KOBEの画像' className='h-screen' />
       </div>
     </main>

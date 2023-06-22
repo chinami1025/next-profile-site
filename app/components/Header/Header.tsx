@@ -1,11 +1,20 @@
-import React from 'react';
+import React, { FC } from 'react';
 
-const Header = () => {
+type Props = {
+  style?: string;
+  title: string;
+};
+
+const Header: FC<Props> = (props) => {
   return (
-    <div>
-      <div className='w-full h-32 text-center items-center grid text-5xl'>
-        Welcom to Chinami PortfolioSite
-      </div>
+    <div
+      className={
+        props.style
+          ? props.style
+          : 'w-full h-48 text-center grid text-6xl drop-shadow-lg items-center'
+      }
+    >
+      {props.title}
     </div>
   );
 };
