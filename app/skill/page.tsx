@@ -14,6 +14,7 @@ import react from '../Images/icon/React.png';
 import next from '../Images/icon/NEXT.png';
 import Firebase from '../Images/icon/Firebase.png';
 import Java from '../Images/icon/Java.png';
+import GitHub from '../Images/icon/GitHub.png';
 
 const page = () => {
   const imageDate = [
@@ -29,6 +30,7 @@ const page = () => {
     { src: next, alt: 'NEXT.JS' },
     { src: Firebase, alt: 'Firebase' },
     { src: Java, alt: 'Java' },
+    { src: GitHub, alt: 'GitHub' },
   ];
 
   return (
