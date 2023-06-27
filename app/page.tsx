@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Header from './components/Header/Header';
 import Nav from './components/Navigation/Nav';
-import kobe from './Images/BEKOBE_01.jpg';
+import kobe from './Images/BEKOBE.jpg';
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
           }
           title={'Welcom to Chinami PortfolioSite'}
         />
-        <Image src={kobe} alt='BE KOBEの画像' className='h-screen' />
+        <Image src={kobe} alt='BEKOBEの画像' className='h-screen' />
       </div>
     </main>
   );
