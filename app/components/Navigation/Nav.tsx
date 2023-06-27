@@ -1,6 +1,10 @@
 import Link from 'next/link';
 import React from 'react';
 import classes from './nav.module.css';
+import Image from 'next/image';
+import Twitter from '../../Images/icon/Twitter.png';
+import Instagram from '../../Images/icon/Instagram.png';
+import GitHub from '../../Images/icon/GitHub.png';
 
 const Nav = () => {
   const NAV_ITEMS = [
@@ -28,6 +32,15 @@ const Nav = () => {
             );
           })}
         </ul>
+        <div className='flex justify-around mt-20'>
+          <Image src={Twitter} alt='Twitterの画像' className='w-12 h-auto ' />
+          <Image
+            src={Instagram}
+            alt='Instagramの画像'
+            className='w-12 h-auto '
+          />
+          <Image src={GitHub} alt='GitHubの画像' className='w-12 h-auto' />
+        </div>
       </nav>
     </div>
   );
