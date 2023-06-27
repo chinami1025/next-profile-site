@@ -3,8 +3,12 @@
 @tailwind utilities;
 
 :root {
-  background: linear-gradient(90deg, #cab7f1, #bcfcff);
-  color: #fefffb;
+  background: linear-gradient(
+    90deg,
+    #cab7f1,
+    #bcfcff
+  ); /* rgb(202, 183, 241) * rgb(188, 252, 255) */
+  color: #fefffb; /* rgb(254, 255, 251) */
   letter-spacing: 0.05em;
 }
 
