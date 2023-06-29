@@ -45,7 +45,7 @@ const page = () => {
                 key={index}
                 src={item.src}
                 alt={`${item.alt}の画像`}
-                className='w-48 h-auto py-10'
+                className='w-48 h-auto py-10 object-cover'
               />
             );
           })}
