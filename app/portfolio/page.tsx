@@ -4,6 +4,7 @@ import Header from '../components/Header/Header';
 import Image from 'next/image';
 import kobe from '../Images/BEKOBE.jpg';
 import Link from 'next/link';
+import classes from './portfolio.module.css';
 
 const page = () => {
   const PORTFOLIO_ITEMS = [
@@ -53,12 +54,15 @@ const page = () => {
         <div className='w-full h-2/3 text-center flex flex-wrap items-center justify-around'>
           {PORTFOLIO_ITEMS.map((item, index) => {
             return (
-              <div className='bg-purple-200 w-1/3 m-8 p-3' key={index}>
+              <div
+                className={`${classes.neumorphism} w-1/3 m-8 p-8 rounded-2xl`}
+                key={index}
+              >
                 <Link href={item.link} target='_blank'>
                   <Image
                     src={kobe}
                     alt={`${item.alt}の画像`}
-                    className='w-full h-full rounded-md pb-4 object-cover'
+                    className='w-full h-full rounded-2xl mb-4 object-cover'
                   />
                 </Link>
                 <div className='w-full h-1/2'>

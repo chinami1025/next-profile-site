@@ -1,0 +1,10 @@
+.neumorphism {
+  box-shadow: -2px -2px 5px rgba(255, 255, 255, 0.5),
+    3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.neumorphism:hover {
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1) inset,
+    -2px -2px 5px rgba(255, 255, 255, 0.5) inset;
+  opacity: 0.9;
+}
