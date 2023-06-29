@@ -12,20 +12,28 @@ const Nav = () => {
     { href: '/profile', label: 'PROFILE' },
     { href: '/career', label: 'CAREER' },
     { href: '/skill', label: 'SKILL' },
-    { href: '/work', label: 'WORK' },
+    { href: '/portfolio', label: 'PORTFOLIO', fontSize: 'text-4xl' },
+    // { href: '/work', label: 'WORK' },
   ];
+
+  const NAV_SNS = [
+    { href: 'https://twitter.com/', src: Twitter, alt: 'Twitter' },
+    { href: 'https://www.instagram.com/', src: Instagram, alt: 'Instagram' },
+    { href: 'https://github.com/chinami1025', src: GitHub, alt: 'GitHub' },
+  ];
+
   return (
     <div>
-      <nav className='border-r border-solid border-current py-32'>
+      <nav className='border-r border-solid border-current py-28 sticky top-0 h-screen'>
         <ul
-          className={`${classes.btn} w-64 h-screen list-none text-5xl items-center bg-purple-150  bg-opacity-25 justify-items-center grid`}
+          className={`${classes.btn} w-64 list-none text-5xl items-center bg-purple-150  bg-opacity-25 justify-items-center grid h-5/6`}
         >
-          {NAV_ITEMS.map((item) => {
+          {NAV_ITEMS.map((item, index) => {
             return (
               <Link
-                key={item.href}
+                key={index}
                 href={item.href}
-                className={`${classes.neon} cursor-pointer`}
+                className={`${classes.neon} cursor-pointer ${item.fontSize}`}
               >
                 {item.label}
               </Link>
@@ -33,13 +41,17 @@ const Nav = () => {
           })}
         </ul>
         <div className='flex justify-around mt-20'>
-          <Image src={Twitter} alt='Twitterの画像' className='w-12 h-auto ' />
-          <Image
-            src={Instagram}
-            alt='Instagramの画像'
-            className='w-12 h-auto '
-          />
-          <Image src={GitHub} alt='GitHubの画像' className='w-12 h-auto' />
+          {NAV_SNS.map((item, index) => {
+            return (
+              <Link key={index} href={item.href} target='_blank'>
+                <Image
+                  src={item.src}
+                  alt={`${item.alt}の画像`}
+                  className='w-12 h-auto '
+                />
+              </Link>
+            );
+          })}
         </div>
       </nav>
     </div>

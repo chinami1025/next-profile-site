@@ -8,14 +8,14 @@ export default function Home() {
     <main className='flex'>
       <Nav />
 
-      <div>
+      <div className='h-screen'>
         <Header
           style={
-            'w-full h-32 text-center items-center grid text-5xl drop-shadow-lg'
+            'w-full h-1/6 text-center items-center grid text-5xl drop-shadow-lg'
           }
           title={'Welcom to Chinami PortfolioSite'}
         />
-        <Image src={kobe} alt='BEKOBEの画像' className='h-screen' />
+        <Image src={kobe} alt='BEKOBEの画像' className='h-5/6 object-cover' />
       </div>
     </main>
   );
