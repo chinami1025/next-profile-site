@@ -20,7 +20,7 @@ const Timeline = () => {
       title: '神戸学院大学',
       subtitle: '法学部法律学科',
       sentence:
-        '佐藤ゼミ：佐藤ゼミ主催の刑法討論会\n弓道部：副女子責任者・会計',
+        '警察官を目指し、刑法を専攻しました。\n佐藤ゼミ：佐藤ゼミ主催の刑法討論会\n刑法討論会2017年 優勝\n\n弓道部：副女子責任者・会計\n弓道 弐段まで取得しました。',
       src: kobegakuin,
       alt: 'kobegakuin',
     },
@@ -30,7 +30,7 @@ const Timeline = () => {
       title: '株式会社コスモネット',
       subtitle: '接客販売',
       sentence:
-        '大手通信会社の代理店の携帯ショップにて\n接客業務に従事しておりました。',
+        '大手通信会社の代理店の携帯ショップにて\n接客業務に従事しておりました。\n\n・契約内容の確認、変更\n・機種のご変更\n・新規契約\n・解約\n・料金支払の受付\n・故障修理の受付\n・イベントの運営\n・商品の販売、管理、発注\n・店内清掃',
       src: cnc,
       alt: 'cnc',
     },
@@ -40,7 +40,7 @@ const Timeline = () => {
       title: '職業訓練校',
       subtitle: 'Java',
       sentence:
-        '大阪の心斎橋の職業訓練校にて4ヶ月間\nJavaを学習しておりました。',
+        '大阪の心斎橋の職業訓練校にて4ヶ月間\nWebの基礎からJavaまでを学習し\nServletとJSPを使用しWebアプリを制作しました。',
       src: JavaSchool,
       alt: 'JavaSchool',
     },
@@ -85,7 +85,7 @@ const Timeline = () => {
                 style={{ backdropFilter: 'blur(200px)' }}
               >
                 <div className='w-1/2 h-full'>
-                  <h3 className='text-3xl'>{item.title}</h3>
+                  <h3 className='text-3xl pb-2'>{item.title}</h3>
                   <h4 className='text-2xl'>{item.subtitle}</h4>
                   <p className='whitespace-pre-wrap'>{item.sentence}</p>
                 </div>
