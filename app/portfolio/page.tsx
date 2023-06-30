@@ -2,7 +2,7 @@ import React from 'react';
 import Nav from '../components/Navigation/Nav';
 import Header from '../components/Header/Header';
 import Image from 'next/image';
-import kobe from '../Images/BEKOBE.jpg';
+import kobe from '../Images/Slideshow/BEKOBE.jpg';
 import Link from 'next/link';
 import classes from './portfolio.module.css';
 
