@@ -1,6 +1,7 @@
 import React from 'react';
 import Nav from '../components/Navigation/Nav';
 import Header from '../components/Header/Header';
+import Footer from '../components/Footer/Footer';
 import Image from 'next/image';
 import HTML from '../Images/icon/HTML.png';
 import CSS from '../Images/icon/CSS.png';
@@ -34,22 +35,23 @@ const page = () => {
   ];
 
   return (
-    <div className='flex'>
+    <div className='pc:flex'>
       <Nav />
       <div>
         <Header title={'SKILL'} />
-        <div className='w-full flex flex-wrap px-10 justify-around'>
+        <div className='w-full flex flex-wrap pc:px-10 justify-around'>
           {imageDate.map((item, index) => {
             return (
               <Image
                 key={index}
                 src={item.src}
                 alt={`${item.alt}の画像`}
-                className='w-48 h-auto py-10 object-cover'
+                className='pc:w-48 w-1/2 h-auto p-10 pc:py-10 pc:px-0 object-cover'
               />
             );
           })}
         </div>
+        <Footer />
       </div>
     </div>
   );

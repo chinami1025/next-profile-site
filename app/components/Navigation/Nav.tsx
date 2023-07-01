@@ -24,9 +24,9 @@ const Nav = () => {
 
   return (
     <div>
-      <nav className='border-r border-solid border-current py-28 sticky top-0 h-screen'>
+      <nav className='border-r pc:border-solid pc:border-current py-28 pc:sticky pc:top-0 h-screen'>
         <ul
-          className={`${classes.btn} w-64 list-none text-5xl items-center bg-purple-150  bg-opacity-25 justify-items-center grid h-5/6`}
+          className={`${classes.btn} pc:w-64 list-none text-5xl items-center bg-purple-150  bg-opacity-25 justify-items-center grid pc:h-5/6`}
         >
           {NAV_ITEMS.map((item, index) => {
             return (

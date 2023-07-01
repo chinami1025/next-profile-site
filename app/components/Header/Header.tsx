@@ -11,7 +11,7 @@ const Header: FC<Props> = (props) => {
       className={
         props.style
           ? props.style
-          : 'w-full h-48 text-center grid text-6xl drop-shadow-lg items-center'
+          : 'w-full pc:h-48 text-center grid text-6xl drop-shadow-lg items-center mb-8'
       }
     >
       {props.title}

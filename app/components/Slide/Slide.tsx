@@ -60,7 +60,7 @@ const Slide = () => {
   ];
 
   return (
-    <div className='w-full h-5/6'>
+    <div className='w-full pc:h-5/6'>
       <Splide
         hasTrack={false}
         aria-label='ホーム写真'

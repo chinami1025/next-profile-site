@@ -1,16 +1,16 @@
 'use client';
 import React from 'react';
-import Image from 'next/image';
 import {
   VerticalTimeline,
   VerticalTimelineElement,
 } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
+import TimelineIcon from './TimelineIcon';
+import Image from 'next/image';
 import kobegakuin from '../../Images/career/kobegakuin.jpg';
 import cnc from '../../Images/career/cnc.jpg';
 import JavaSchool from '../../Images/career/JavaSchool.jpg';
 import autumn from '../../Images/career/autumn.jpg';
-import TimelineIcon from './TimelineIcon';
 
 const Timeline = () => {
   const TIMELINE_DATE = [
@@ -81,10 +81,10 @@ const Timeline = () => {
               date={item.date}
             >
               <div
-                className='flex items-center justify-around '
+                className='pc:flex items-center justify-around '
                 style={{ backdropFilter: 'blur(200px)' }}
               >
-                <div className='w-1/2 h-full'>
+                <div className='pc:w-1/2 h-full'>
                   <h3 className='text-3xl pb-2'>{item.title}</h3>
                   <h4 className='text-2xl'>{item.subtitle}</h4>
                   <p className='whitespace-pre-wrap'>{item.sentence}</p>
@@ -93,7 +93,7 @@ const Timeline = () => {
                   <Image
                     src={item.src}
                     alt={`${item.alt}の画像`}
-                    className='w-2/3 h-full object-cover m-5 '
+                    className='pc:w-2/3 h-full object-cover m-5 '
                   />
                 </div>
               </div>
