@@ -1,5 +1,6 @@
+'use client';
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
 import classes from './nav.module.css';
 import Image from 'next/image';
 import Twitter from '../../Images/icon/Twitter.png';
@@ -7,8 +8,17 @@ import Instagram from '../../Images/icon/Instagram.png';
 import GitHub from '../../Images/icon/GitHub.png';
 
 const Nav = () => {
+  const [isOpen, setOpen] = useState<boolean>(false);
+  const handleMenuOpen = () => {
+    setOpen(!isOpen);
+  };
+
+  const handleMenuClose = () => {
+    setOpen(false);
+  };
+
   const NAV_ITEMS = [
-    { href: '/', label: 'HOME' },
+    { href: '/', label: 'HOME', marginTop: 'mt-4' },
     { href: '/profile', label: 'PROFILE' },
     { href: '/career', label: 'CAREER' },
     { href: '/skill', label: 'SKILL' },
@@ -24,36 +34,76 @@ const Nav = () => {
 
   return (
     <div>
-      <nav className='border-r pc:border-solid pc:border-current py-28 pc:sticky pc:top-0 h-screen'>
+      <nav
+        className={
+          isOpen
+            ? 'z-40 bg-blue-200 fixed top-0 right-0 bottom-0 left-0 h-screen flex flex-col'
+            : 'fixed right-[-100%] lg:border-r lg:border-solid lg:border-current lg:py-24 lg:sticky lg:top-0 lg:w-64 lg:h-screen'
+        }
+      >
         <ul
-          className={`${classes.btn} pc:w-64 list-none text-5xl items-center bg-purple-150  bg-opacity-25 justify-items-center grid pc:h-5/6`}
+          className={
+            isOpen
+              ? 'flex h-screen justify-center items-center flex-col gap-10 text-4xl'
+              : `block ${classes.btn} list-none lg:text-5xl items-center lg:bg-purple-150  lg:bg-opacity-25 lg:h-5/6 lg:grid lg:gap-9`
+          }
         >
           {NAV_ITEMS.map((item, index) => {
             return (
-              <Link
-                key={index}
-                href={item.href}
-                className={`${classes.neon} cursor-pointer ${item.fontSize}`}
-              >
-                {item.label}
-              </Link>
+              <li key={index}>
+                <Link
+                  href={item.href}
+                  className={`${classes.neon} cursor-pointer ${item.marginTop} ${item.fontSize}`}
+                  onClick={handleMenuClose}
+                >
+                  {item.label}
+                </Link>
+              </li>
             );
           })}
         </ul>
-        <div className='flex justify-around mt-20'>
+        <div className='flex lg:gap-7 lg:mt-20 gap-10 mb-20 lg:mb-0 justify-center'>
           {NAV_SNS.map((item, index) => {
             return (
               <Link key={index} href={item.href} target='_blank'>
                 <Image
                   src={item.src}
                   alt={`${item.alt}の画像`}
-                  className='w-12 h-auto '
+                  className='w-12 h-auto'
+                  onClick={handleMenuClose}
                 />
               </Link>
             );
           })}
         </div>
       </nav>
+      {/* ハンバーガーメニュー */}
+      <button
+        className='z-50 space-y-2 lg:hidden mt-3 ml-2 relative'
+        onClick={isOpen ? handleMenuClose : handleMenuOpen}
+      >
+        <span
+          className={
+            isOpen
+              ? 'block w-8 h-0.5 bg-white translate-y-2.5 rotate-45 duration-300'
+              : 'block w-8 h-0.5 bg-white duration-300'
+          }
+        />
+        <span
+          className={
+            isOpen
+              ? 'block opacity-0 duration-300'
+              : 'block w-8 h-0.5 bg-white duration-300'
+          }
+        />
+        <span
+          className={
+            isOpen
+              ? 'block w-8 h-0.5 bg-white -rotate-45 duration-300'
+              : 'block w-8 h-0.5 bg-white duration-300'
+          }
+        />
+      </button>
     </div>
   );
 };
