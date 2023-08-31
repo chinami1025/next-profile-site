@@ -22,7 +22,7 @@ const page = () => {
       language: 'HTML・CSS',
     },
     {
-      link: 'https://chinami-t-portfolio.com/',
+      link: 'https://chinami1025.github.io/Profile-Site/',
       src: portfolioSite,
       alt: 'portfolioSite',
       title: '旧ポートフォリオサイト',
