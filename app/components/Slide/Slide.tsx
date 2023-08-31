@@ -60,7 +60,7 @@ const Slide = () => {
   ];
 
   return (
-    <div className='w-full pc:h-5/6'>
+    <div className='w-full lg:h-4/6'>
       <Splide
         hasTrack={false}
         aria-label='ホーム写真'
@@ -70,7 +70,7 @@ const Slide = () => {
         <SplideTrack className='h-full w-full'>
           {SLIDE_IMG.map((item, index) => {
             return (
-              <SplideSlide key={index} className='h-full w-full'>
+              <SplideSlide key={index}>
                 <Image
                   src={item.src}
                   alt={`${item.alt}の画像`}

@@ -55,11 +55,11 @@ const page = () => {
   ];
 
   return (
-    <div className='pc:flex relative'>
+    <div className='lg:flex relative'>
       <Nav />
       <div className='w-full h-full'>
         <Header title={'PROFILE'} />
-        <div className='pc:px-20 pc:flex justify-around'>
+        <div className='lg:px-20 lg:flex justify-around'>
           <div className='flex flex-wrap w-96'>
             {PROGILE_IMGS.map((item, index) => {
               return (
@@ -72,22 +72,22 @@ const page = () => {
               );
             })}
           </div>
-          <div className='text-center py-14 pc:w-1/2'>
-            <p className='pc:text-6xl text-2xl pb-5'>Chinami Toda</p>
-            <p className='pc:text-3xl pb-4'>1996/10/25</p>
-            <p className='pc:text-3xl pb-4'>神戸出身</p>
-            <p className='pc:text-3xl pb-4'>大阪府豊中市在住</p>
-            <p className='pc:text-2xl text-sm'>
+          <div className='text-center py-14 lg:w-1/2'>
+            <p className='lg:text-6xl text-2xl pb-5'>Chinami Toda</p>
+            <p className='lg:text-3xl pb-4'>1996/10/25</p>
+            <p className='lg:text-3xl pb-4'>神戸出身</p>
+            <p className='lg:text-3xl pb-4'>大阪府豊中市在住</p>
+            <p className='lg:text-2xl text-sm'>
               趣味：メイク研究 ・筋トレ・ゲーム
             </p>
           </div>
         </div>
-        <div className='text-center pc:m-20 m-10'>
+        <div className='text-center lg:m-20 m-10'>
           {CONTENT.map((item, index) => {
             return (
               <div key={index}>
-                <p className='pc:text-3xl text-xl pt-16 pb-8'>{item.title}</p>
-                <p className='pc:text-2xl whitespace-pre-wrap'>
+                <p className='lg:text-3xl text-xl pt-16 pb-8'>{item.title}</p>
+                <p className='lg:text-2xl whitespace-pre-wrap'>
                   {item.sentence}
                 </p>
               </div>

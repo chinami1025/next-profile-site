@@ -6,7 +6,7 @@ import Footer from '../components/Footer/Footer';
 
 const page = () => {
   return (
-    <div className='pc:flex'>
+    <div className='lg:flex'>
       <Nav />
 
       <div className='w-full h-full '>

@@ -35,18 +35,18 @@ const page = () => {
   ];
 
   return (
-    <div className='pc:flex'>
+    <div className='lg:flex'>
       <Nav />
-      <div>
+      <div className='w-full h-full'>
         <Header title={'SKILL'} />
-        <div className='w-full flex flex-wrap pc:px-10 justify-around'>
+        <div className='flex flex-wrap lg:px-10 justify-around mb-32'>
           {imageDate.map((item, index) => {
             return (
               <Image
                 key={index}
                 src={item.src}
                 alt={`${item.alt}の画像`}
-                className='pc:w-48 w-1/2 h-auto p-10 pc:py-10 pc:px-0 object-cover'
+                className='lg:w-48 w-1/2 h-auto p-10 lg:py-10 lg:px-0 object-cover'
               />
             );
           })}
