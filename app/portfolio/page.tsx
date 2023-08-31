@@ -52,15 +52,18 @@ const page = () => {
   ];
 
   return (
-    <div className='pc:flex'>
+    <div className='lg:flex'>
       <Nav />
       <div className='w-full h-full'>
         <Header title={'PORTFOLIO'} />
-        <div className='w-full pc:h-2/3 text-center flex flex-wrap items-center justify-around'>
+        <p className='text-center lg:text-xl mx-6'>
+          画像をクリックするとGitHubのリンクに行きます
+        </p>
+        <div className='w-full lg:h-2/3 text-center flex flex-wrap items-center justify-around'>
           {PORTFOLIO_ITEMS.map((item, index) => {
             return (
               <div
-                className={`${classes.neumorphism} pc:w-1/3 m-8 p-8 rounded-2xl`}
+                className={`${classes.neumorphism}  lg:w-1/3 m-8 p-8 rounded-2xl`}
                 key={index}
               >
                 <Link href={item.link} target='_blank'>
@@ -71,8 +74,8 @@ const page = () => {
                   />
                 </Link>
                 <div className='w-full h-1/2'>
-                  <p className='pc:text-3xl text-xl pb-4'>{item.title}</p>
-                  <ul className='text-start pc:text-xl text-md whitespace-pre-wrap leading-loose'>
+                  <p className='lg:text-3xl text-xl pb-4'>{item.title}</p>
+                  <ul className='text-start lg:text-xl text-md whitespace-pre-wrap leading-loose'>
                     <li>作成理由：{item.reason}</li>
                     <li>作成期間：{item.period}</li>
                     <li>使用言語：{item.language}</li>
