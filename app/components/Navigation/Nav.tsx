@@ -78,32 +78,34 @@ const Nav = () => {
         </div>
       </nav>
       {/* ハンバーガーメニュー */}
-      <button
-        className='z-50 space-y-2 lg:hidden mt-3 ml-2 relative'
-        onClick={isOpen ? handleMenuClose : handleMenuOpen}
-      >
-        <span
-          className={
-            isOpen
-              ? 'block w-8 h-0.5 bg-white translate-y-2.5 rotate-45 duration-300'
-              : 'block w-8 h-0.5 bg-white duration-300'
-          }
-        />
-        <span
-          className={
-            isOpen
-              ? 'block opacity-0 duration-300'
-              : 'block w-8 h-0.5 bg-white duration-300'
-          }
-        />
-        <span
-          className={
-            isOpen
-              ? 'block w-8 h-0.5 bg-white -rotate-45 duration-300'
-              : 'block w-8 h-0.5 bg-white duration-300'
-          }
-        />
-      </button>
+      <div className='grid justify-end'>
+        <button
+          className='z-50 space-y-2 lg:hidden mt-5 mr-3 mb-3 block'
+          onClick={isOpen ? handleMenuClose : handleMenuOpen}
+        >
+          <span
+            className={
+              isOpen
+                ? 'block w-8 h-0.5 bg-white translate-y-2.5 rotate-45 duration-300'
+                : 'block w-8 h-0.5 bg-white duration-300'
+            }
+          />
+          <span
+            className={
+              isOpen
+                ? 'block opacity-0 duration-300'
+                : 'block w-8 h-0.5 bg-white duration-300'
+            }
+          />
+          <span
+            className={
+              isOpen
+                ? 'block w-8 h-0.5 bg-white -rotate-45 duration-300'
+                : 'block w-8 h-0.5 bg-white duration-300'
+            }
+          />
+        </button>
+      </div>
     </div>
   );
 };
