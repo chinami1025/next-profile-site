@@ -50,7 +50,7 @@ const Timeline = () => {
       title: '株式会社Autumn',
       subtitle: 'フロントエンドエンジニア',
       sentence:
-        'フロントのカリキュラムを学習しながら\n簡易案件で働いています。',
+        'フロントエンドのカリキュラムを学習しながら\n簡易案件で働いておりました。\n【カリキュラムの内容】\nHTML\nCSS\nSass\nJavaScript\njQuery\nTypeScript\nTailwindCSS\nReact',
       src: autumn,
       alt: 'autumn',
     },
