@@ -25,7 +25,7 @@ const Timeline = () => {
       alt: 'kobegakuin',
     },
     {
-      date: '2019/7 〜 2021/7',
+      date: '2019/07 〜 2021/12',
       icon: 'mobile',
       title: '株式会社コスモネット',
       subtitle: '接客販売',
@@ -35,7 +35,7 @@ const Timeline = () => {
       alt: 'cnc',
     },
     {
-      date: '2022/7 〜 2022/10',
+      date: '2022/07 〜 2022/10',
       icon: 'computer',
       title: '職業訓練校',
       subtitle: 'Java',
@@ -45,7 +45,7 @@ const Timeline = () => {
       alt: 'JavaSchool',
     },
     {
-      date: '2023/7 〜 現在',
+      date: '2023/07 〜 2023/08',
       icon: 'computer',
       title: '株式会社Autumn',
       subtitle: 'フロントエンドエンジニア',
